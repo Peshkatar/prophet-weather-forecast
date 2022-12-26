@@ -1,0 +1,5 @@
+name: /Users/arlindiseni/Documents/G Drive/DVAMI20/3/LP2/DV2599/labs/assignment3/env
+channels:
+  - conda-forge
+  - defaults
+prefix: /Users/arlindiseni/Documents/G Drive/DVAMI20/3/LP2/DV2599/labs/assignment3/env
