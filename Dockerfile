@@ -18,7 +18,7 @@ RUN conda create -p ./venv pandas prophet seaborn jupyterlab
 # ENV PATH /opt/conda/envs/data-science-test/bin:$PATH
 # ENV PATH /opt/miniconda3/envs/data-science-test/bin:$PATH
 #RUN /bin/bash -c "conda activate ./venv
-RUN conda activate ./ven
+RUN conda activate ./venv
 
 # open port 5000
 EXPOSE 5000
