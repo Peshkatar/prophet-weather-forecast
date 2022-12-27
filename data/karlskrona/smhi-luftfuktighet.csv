@@ -1,29 +1,20 @@
-﻿Stationsnamn;Stationsnummer;Stationsnät;Mäthöjd (meter över marken)
-Karlskrona-Söderstjerna;65090;SMHIs stationsnät;2.0
-
-Parameternamn;Beskrivning;Enhet
-Relativ Luftfuktighet;momentanvärde, 1 gång/tim;percent
-
-Tidsperiod (fr.o.m);Tidsperiod (t.o.m);Höjd (meter över havet);Latitud (decimalgrader);Longitud (decimalgrader)
-2010-03-01 00:00:00;2022-11-01 10:00:00;2.4;56.1500;15.5890
-
-Datum;Tid (UTC);Relativ Luftfuktighet;Kvalitet;;Tidsutsnitt:
-2010-03-01;06:00:00;96;Y;;Kvalitetskontrollerade historiska data (utom de senaste 3 mån)
-2010-03-05;18:00:00;74;Y;;Tidsperiod (fr.o.m.) = 2010-03-01 00:00:00 (UTC)
-2010-04-01;00:00:00;93;Y;;Tidsperiod (t.o.m.) = 2022-08-01 06:00:00 (UTC)
-2010-05-01;00:00:00;91;Y;;Samplingstid = Ej angivet
-2010-06-01;00:00:00;78;Y;;
-2010-07-01;00:00:00;78;Y;;Kvalitetskoderna:
-2010-07-12;18:00:00;71;Y;;Grön (G) = Kontrollerade och godkända värden.
-2010-08-23;23:00:00;94;Y;;Gul (Y) = Misstänkta eller aggregerade värden. Grovt kontrollerade arkivdata och okontrollerade realtidsdata (senaste 2 tim).
-2010-08-29;18:00:00;79;Y;;
-2010-09-16;02:00:00;76;Y;;Nätinformation:
-2010-10-01;00:00:00;89;Y;;SMHIs Stationsnät: Data samlas in och lagras i SMHIs databaser. Data kvalitetskontrolleras vilket innebär att felaktiga data korrigeras och att databortfall kompletteras utifrån expertbedömning där det är möjligt. De flesta stationerna övervakas, inspekteras och underhålls löpande av SMHI.
-2010-10-17;18:00:00;67;Y;;Övriga stationer: Data samlas in och lagras i SMHIs databaser. Datakvaliteten är för SMHI okänd då SMHI varken utför kvalitetskontroll på data eller inspektioner på stationerna.
-2010-11-01;00:00:00;98;Y;;
-2010-11-12;13:00:00;90;Y;;Möjliga orsaker till saknade data:
-2010-11-30;18:00:00;86;Y;;- stationen eller givaren har varit ur funktion.
-2010-12-01;00:00:00;91;Y;;- stationen har endast levererat värden med kvalitetskod Röd (R). Dessa levereras ej.
+﻿Datum;Tid (UTC);Relativ Luftfuktighet;Kvalitet
+2010-03-01;06:00:00;96;Y
+2010-03-05;18:00:00;74;Y
+2010-04-01;00:00:00;93;Y
+2010-05-01;00:00:00;91;Y
+2010-06-01;00:00:00;78;Y
+2010-07-01;00:00:00;78;Y
+2010-07-12;18:00:00;71;Y
+2010-08-23;23:00:00;94;Y
+2010-08-29;18:00:00;79;Y
+2010-09-16;02:00:00;76;Y
+2010-10-01;00:00:00;89;Y
+2010-10-17;18:00:00;67;Y
+2010-11-01;00:00:00;98;Y
+2010-11-12;13:00:00;90;Y
+2010-11-30;18:00:00;86;Y
+2010-12-01;00:00:00;91;Y
 2010-12-22;18:00:00;83;Y
 2011-01-01;00:00:00;96;Y
 2011-02-01;00:00:00;96;Y
