@@ -1,0 +1,9 @@
+name: venv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pandas
+  - prophet
+  - seaborn
+  - jupyterlab
