@@ -1,5 +1,10 @@
 FROM continuumio/miniconda3
 
+WORKDIR /assignment-3
+
+# open port 8888
+EXPOSE 8888
+
 # copy all local files
 COPY . .
 
@@ -12,9 +17,8 @@ RUN conda create -p ./venv pandas prophet seaborn jupyterlab
 #RUN conda env update -p ./venv --file environment.yml  --prune
 
 # activate environment
-SHELL ["conda", "run", "-n", "./venv", "/bin/bash", "-c"]
+#SHELL ["conda", "run", "-n", "./venv", "/bin/bash", "-c"]
+SHELL ["conda", "activate", "./venv", "/bin/bash", "-c"]
+#SHELL ["jupyter", "lab", "--notebook-dir=/assignment3", "--ip=0.0.0.0", "--port=5000", "--allow-root", "/bin/bash", "-c"]
 
-# open port 5000
-EXPOSE 5000
-
-ENTRYPOINT ["jupyter", "lab", "--notebook-dir=/home", "--ip=0.0.0.0", "--port=5000", "--allow-root"]
+ENTRYPOINT ["jupyter", "lab", "--notebook-dir=/assignment3", "--ip=0.0.0.0", "--port=5000", "--allow-root"]
