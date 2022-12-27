@@ -1,10 +1,7 @@
 FROM continuumio/miniconda3
 
-# copy environment-file
+# copy all local files
 COPY . .
-
-# update conda
-#RUN conda update -y conda
 
 # create local virtual environment
 # https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
@@ -15,10 +12,7 @@ RUN conda create -p ./venv pandas prophet seaborn jupyterlab
 #RUN conda env update -p ./venv --file environment.yml  --prune
 
 # activate environment
-# ENV PATH /opt/conda/envs/data-science-test/bin:$PATH
-# ENV PATH /opt/miniconda3/envs/data-science-test/bin:$PATH
-#RUN /bin/bash -c "conda activate ./venv
-RUN conda activate ./venv
+SHELL ["conda", "run", "-n", "./venv", "/bin/bash", "-c"]
 
 # open port 5000
 EXPOSE 5000
