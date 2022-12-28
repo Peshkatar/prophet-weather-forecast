@@ -1,9 +1,9 @@
-### Running docker
+# Running docker
+<br>
 
-
-#### Terminal commands
+### Terminal commands
 ```docker build -t assignment-3 .```
 ```docker run -it assignment-3 ```
 
-#### Detached mode
+### Detached mode
 ```docker run -it -d assigment -3```
