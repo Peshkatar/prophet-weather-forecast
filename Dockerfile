@@ -2,23 +2,23 @@ FROM continuumio/miniconda3
 
 WORKDIR /assignment-3
 
-# open port 8888
-EXPOSE 8888
+# open port 5000
+EXPOSE 5000
 
 # copy all local files
 COPY . .
 
 # create local virtual environment
 # https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
-#RUN conda create -p ./venv
-RUN conda create -p ./venv pandas prophet seaborn jupyterlab
+RUN conda env create -f environment.yml
 
-# update environment from environment.yml
-#RUN conda env update -p ./venv --file environment.yml  --prune
+# activate environment manuelly
+ENV CONDA_EXE /opt/conda/bin/conda
+ENV CONDA_PREFIX /opt/conda/envs/venv
+ENV CONDA_PYTHON_EXE /opt/conda/bin/python
+ENV CONDA_PROMPT_MODIFIER (venv)
+ENV CONDA_DEFAULT_ENV venv
+ENV PATH /opt/conda/envs/venv/bin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+RUN echo "conda activate venv" >> ~/.bashrc
 
-# activate environment
-#SHELL ["conda", "run", "-n", "./venv", "/bin/bash", "-c"]
-SHELL ["conda", "activate", "./venv", "/bin/bash", "-c"]
-#SHELL ["jupyter", "lab", "--notebook-dir=/assignment3", "--ip=0.0.0.0", "--port=5000", "--allow-root", "/bin/bash", "-c"]
-
-ENTRYPOINT ["jupyter", "lab", "--notebook-dir=/assignment3", "--ip=0.0.0.0", "--port=5000", "--allow-root"]
+ENTRYPOINT ["jupyter", "lab", "--ip=0.0.0.0", "--port=5000", "--allow-root"]
